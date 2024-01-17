@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { parseCookies } from "nookies";
+import Image from "next/image";
 // import  Button  from "antd";
 import StripeCheckout from "react-stripe-checkout";
 import baseUrl from "@/helper/BaseUrl";
@@ -77,22 +78,24 @@ const Cart = ({ products }) => {
               className="flex justify-between w-11/12 h-32 m-auto items-center bg-white border border-gray-200 rounded-lg shadow-md flex-wrap"
               key={p._id}
             >
-              <img
+              <Image
                 src={p.product.mediaurl}
                 className="w-40 h-20 ml-2 rounded-lg shadow-lg"
+                alt="Product Image"
               />
+
               <div className="cartitem mr-2">
                 <h1 className="text-lg font-bold">{p.product.name}</h1>
                 <button
                   className="
-              text-sm
-              font-bold
-              h-6
-              w-20
-              bg-slate-500
-              rounded-lg
-              hover:bg-red-700
-              "
+                  text-sm
+                  font-bold
+                  h-6
+                  w-20
+                  bg-slate-500
+                  rounded-lg
+                  hover:bg-red-700
+                  "
                   onClick={() => handleRemove(p.product._id)}
                 >
                   Remove

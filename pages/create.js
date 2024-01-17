@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import axios from "axios";
-import { useState } from "react";
+import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { parseCookies } from "nookies";
 import { useRouter } from "next/router";
@@ -7,9 +8,10 @@ import baseUrl from "@/helper/BaseUrl";
 
 
 const create = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router=useRouter();
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState();
   const [price, setPrice] = useState("");
   const [media, setMedia] = useState("");
 

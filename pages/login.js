@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Button } from "@chakra-ui/react";

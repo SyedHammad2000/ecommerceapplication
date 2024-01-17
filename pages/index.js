@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import baseUrl from "@/helper/BaseUrl";
+import Image from "next/image"
 
 
 
 const page = ({ products }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [currentPage, setCurrentPage] = useState(1)
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [productsPerPage] = useState(4)
   // Get current products
   const indexOfLastProduct = currentPage * productsPerPage
@@ -21,7 +24,7 @@ const page = ({ products }) => {
             {currentProducts.map((product) => (
               <div key={product._id} className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img
+                  <Image
                     src={product.mediaurl}
                     alt={product.name}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
