@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import "./globals.css";
 import "../styles/Navbar.scss";
 // import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import 'react-toastify/dist/ReactToastify.css';
 
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -21,3 +21,5 @@ export default function MyApp({ Component, pageProps }) {
     
   );
 }
+
+

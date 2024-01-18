@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import baseUrl from "@/helper/BaseUrl";
+// import baseUrl from "@/helper/BaseUrl";
 import Image from "next/image"
 
 
@@ -70,7 +70,7 @@ const page = ({ products }) => {
 };
 
 // export const getStaticProps = async () => {
-//   const { data } = await axios.get(`${baseUrl}/api/product`);
+//   const { data } = await axios.get(`http://localhost:3000/api/product`);
 //   // const data = await res.json();
 
 //   return {
@@ -83,7 +83,7 @@ const page = ({ products }) => {
 
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get(`${baseUrl}/api/product`);
+  const { data } = await axios.get(`http://localhost:3000/api/product`);
   // const data = await res.json();
 
   return {

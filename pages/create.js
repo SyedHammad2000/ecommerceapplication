@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { parseCookies } from "nookies";
 import { useRouter } from "next/router";
-import baseUrl from "@/helper/BaseUrl";
+// import baseUrl from "@/helper/BaseUrl";
 
 
 const create = () => {
@@ -23,7 +23,7 @@ const create = () => {
 
     try {
       const data = await axios.post(
-        `${baseUrl}/api/product`,
+        `http://localhost:3000/api/product`,
         {
           name: name,
           description: description,
